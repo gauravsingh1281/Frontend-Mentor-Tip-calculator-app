@@ -34,12 +34,18 @@ customTipElem.addEventListener("change", function () {
 });
 
 const calculateTip = (tipPercentValue, billAmount, personNum) => {
-  if (!tipPercentValue || !billAmount || !personNum) {
+  if (!tipPercentValue && !billAmount && !personNum) {
+    billAmountElem.style.border = "2px solid red";
     personNumElem.style.border = "2px solid red";
     document.querySelector(".person-num #err-msg").style.visibility = "visible";
+    document.querySelector(".select-tip #err-msg").style.visibility = "visible";
+    document.querySelector(".input-bill #err-msg").style.visibility = "visible";
   } else {
     personNumElem.style.border = "2px solid transparent";
+    billAmountElem.style.border = "2px solid transparent";
     document.querySelector(".person-num #err-msg").style.visibility = "hidden";
+    document.querySelector(".select-tip #err-msg").style.visibility = "hidden";
+    document.querySelector(".input-bill #err-msg").style.visibility = "hidden";
     const tip = (billAmount * tipPercentValue) / 100;
     const tipPerPerson = tip / personNum;
     const totalTipPerPerson = (billAmount + tip) / personNum;
@@ -48,6 +54,26 @@ const calculateTip = (tipPercentValue, billAmount, personNum) => {
     }
     tipAmountElem.textContent = parseFloat(tipPerPerson).toFixed(2);
     totalTipElem.textContent = parseFloat(totalTipPerPerson).toFixed(2);
+  }
+
+  if (!tipPercentValue) {
+    document.querySelector(".select-tip #err-msg").style.visibility = "visible";
+  } else {
+    document.querySelector(".select-tip #err-msg").style.visibility = "hidden";
+  }
+  if (!billAmount) {
+    billAmountElem.style.border = "2px solid red";
+    document.querySelector(".input-bill #err-msg").style.visibility = "visible";
+  } else {
+    billAmountElem.style.border = "2px solid transparent";
+    document.querySelector(".input-bill #err-msg").style.visibility = "hidden";
+  }
+  if (!personNum) {
+    personNumElem.style.border = "2px solid red";
+    document.querySelector(".person-num #err-msg").style.visibility = "visible";
+  } else {
+    personNumElem.style.border = "2px solid transparent";
+    document.querySelector(".person-num #err-msg").style.visibility = "hidden";
   }
 };
 

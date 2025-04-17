@@ -185,10 +185,15 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 #err-msg {
-    font-size: 12px;
+    visibility: hidden;
     color: red;
-    /* visibility: hidden; */
+    font-size: 12px;
+}
+
+.error-border {
+    border: 2px solid red;
 }
