@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+body {
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+h1 {
+    color: var(--Very-dark-cyan);
+    letter-spacing: 5px;
+    line-height: 40px;
+}
+
+.container {
+    background-color: var(--White);
+    height: 350px;
+    width: 676px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.bill-input-section {
+    width: 45%;
+    background-color: var(--White);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#billAmount:hover,
+#customTip:hover {
+    border: 2px solid var(--Strong-cyan);
+    cursor: pointer;
+}
+
+.bill-input-section p {
+    color: var(--Dark-grayish-cyan);
+}
+
+.bill-result {
+    width: 45%;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.tip-btn {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    gap: 7px;
+}
+
+.tip-btn input {
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn {
+    padding: 7px 8px;
+    background-color: var(--Very-dark-cyan);
+    cursor: pointer;
+    color: var(--White);
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn:hover {
+
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.btn:active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.userInput {
+    width: 100%;
+    padding: 5px;
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: right;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+}
+
+#icon1,
+#icon2 {
+    width: 17px;
+    position: absolute;
+}
+
+#icon1 {
+    top: 52px;
+    left: 8px;
+}
+
+#icon2 {
+    bottom: 16px;
+    left: 8px;
+}
+
+.bill-result h4 {
+    color: var(--White);
+    font-size: 12px;
+}
+
+.reset-btn {
+    width: 100%;
+    border-radius: 5px;
+    color: var(--Very-dark-cyan);
+    padding: 5px;
+    background-color: var(--Dark-grayish-cyan);
+    outline: none;
+    border: 0;
+}
+
+.tipHead p {
+    color: var(--Grayish-cyan);
+    font-size: 10px;
+}
+
+.tipAmount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    align-items: center;
+}
+
+.tipValue p {
+    color: var(--Strong-cyan);
+    font-size: 24px;
+}
+
+.active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.person-num,
+.select-tip,
+.input-bill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#err-msg {
+    font-size: 12px;
+    color: red;
+    /* visibility: hidden; */
+}
