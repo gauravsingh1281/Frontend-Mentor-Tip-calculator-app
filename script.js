@@ -82,6 +82,7 @@ const calculateTip = (tipPercentValue, billAmount, personNum) => {
   totalTipElem.textContent = totalTipPerPerson.toFixed(2);
 };
 
+// reset value to initial state
 const resetValue = function () {
   tipAmountElem.textContent = 0;
   totalTipElem.textContent = 0;
