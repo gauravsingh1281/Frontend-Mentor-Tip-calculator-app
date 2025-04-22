@@ -56,7 +56,8 @@ h1 {
 }
 
 #billAmount:hover,
-#customTip:hover {
+#customTip:hover,
+#personNum:hover {
     border: 2px solid var(--Strong-cyan);
     cursor: pointer;
 }
@@ -155,6 +156,12 @@ h1 {
     background-color: var(--Dark-grayish-cyan);
     outline: none;
     border: 0;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.reset-btn:active {
+    scale: 0.9;
 }
 
 .tipHead p {
